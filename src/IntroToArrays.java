@@ -47,15 +47,19 @@ public class IntroToArrays {
 //        int[] arr = {3, 3, 3, 3, 3};
 //        System.out.println(findDuplicate(arr));
 
-        int[] arr = {1, 4, 5, 3, 2, 7};
-        int key = 5;
+//        int[] arr = {1, 4, 5, 3, 2, 7};
+//        int key = 5;
+//
+//        ArrayList<int[]> result = pairSum(arr, key);
+//
+//        // Print the pairs
+//        for (int[] pair : result) {
+//            System.out.println("[" + pair[0] + ", " + pair[1] + "]");
+//        }
 
-        ArrayList<int[]> result = pairSum(arr, key);
-
-        // Print the pairs
-        for (int[] pair : result) {
-            System.out.println("[" + pair[0] + ", " + pair[1] + "]");
-        }
+        int[] arr = {1, 2, 3, 4, 5, 7, 13};
+        int key = 11;
+        System.out.println(binSearch(arr, key));
 
     }
 
@@ -69,6 +73,19 @@ public class IntroToArrays {
             i++;
         }
         return "Not Found";
+    }
+
+    // Binary Search
+    public static boolean binSearch(int[] arr, int key) {
+        int s = 0;
+        int e = arr.length - 1;
+        while (s <= e) {
+            int m = s + (e - s) / 2;
+            if(arr[m] == key) return true;
+            else if(key < arr[m]) e = m - 1;
+            else s = m + 1;
+        }
+        return false;
     }
 
     // Two Pointer Approach in 1
