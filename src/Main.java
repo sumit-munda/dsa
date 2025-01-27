@@ -1,10 +1,15 @@
 import java.util.Scanner;
 
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in); // util package
+        BinSearchIQ bs = new BinSearchIQ();
+
+        int[] arr = {1, 2 ,3};
+        System.out.println(bs.peakIndexInMountainArray(arr));
 
         System.out.println("Hello World"); // lang package
 //        System.out.println(Integer.SIZE);
@@ -134,8 +139,9 @@ public class Main {
 //        }
 //                   |\
         // Pattern 4 |_\
-        System.out.print("Enter no of rows: ");
-        int n = in.nextInt();
+//        System.out.print("Enter no of rows: ");
+//        int n = in.nextInt();
+
 //        int i = 1;
 //        while (i <= n ) {
 //            int j = 1;
@@ -456,27 +462,27 @@ public class Main {
 //        }
 
         // Pattern 17 Mega
-        int i = 1;
-        while (i <= n) {
-            int j = 1;
-            while (j <= n - i + 2) {
-                System.out.print(j);
-                j++;
-            }
-            int k = 1;
-            while (k < i) {
-                System.out.print("**");
-                k++;
-            }
-            int l = n - i + 2;
-            while (l >= 1) {
-                System.out.print(l);
-                l--;
-            }
-            System.out.println();
-            i++;
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n - i + 2) {
+//                System.out.print(j);
+//                j++;
+//            }
+//            int k = 1;
+//            while (k < i) {
+//                System.out.print("**");
+//                k++;
+//            }
+//            int l = n - i + 2;
+//            while (l >= 1) {
+//                System.out.print(l);
+//                l--;
+//            }
+//            System.out.println();
+//            i++;
 
-        }
+//        }
 
 
 
